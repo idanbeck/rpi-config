@@ -1,0 +1,2000 @@
+Installing BlueZ
+Get:1 http://archive.raspberrypi.org/debian stretch InRelease [25.4 kB]
+Get:2 http://raspbian.raspberrypi.org/raspbian stretch InRelease [15.0 kB]
+Get:3 http://raspbian.raspberrypi.org/raspbian stretch/main armhf Packages [11.7 MB]
+Fetched 11.7 MB in 3min 50s (50.8 kB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+libdbus-1-dev is already the newest version (1.10.28-0+deb9u1).
+libglib2.0-dev is already the newest version (2.50.3-2).
+libical-dev is already the newest version (2.0.0-0.5+b1).
+libreadline-dev is already the newest version (7.0-3).
+libudev-dev is already the newest version (232-25+deb9u11).
+libusb-dev is already the newest version (2:0.1.12-30).
+0 upgraded, 0 newly installed, 0 to remove and 5 not upgraded.
+./rpi-install-bluez.sh: line 7: cd: /root/dev/: No such file or directory
+mkdir: cannot create directory ‘bluez’: File exists
+--2019-06-21 00:14:36--  https://s3.amazonaws.com/json-c_releases/releases/json-c-0.13.tar.gz
+Resolving s3.amazonaws.com (s3.amazonaws.com)... 52.216.112.117
+Connecting to s3.amazonaws.com (s3.amazonaws.com)|52.216.112.117|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 634720 (620K) [application/x-gzip]
+Saving to: ‘json-c-0.13.tar.gz.3’
+
+     0K .......... .......... .......... .......... ..........  8% 1.46M 0s
+    50K .......... .......... .......... .......... .......... 16%  343K 1s
+   100K .......... .......... .......... .......... .......... 24%  143K 2s
+   150K .......... .......... .......... .......... .......... 32% 96.9K 2s
+   200K .......... .......... .......... .......... .......... 40%  135K 2s
+   250K .......... .......... .......... .......... .......... 48%  108K 2s
+   300K .......... .......... .......... .......... .......... 56%  174K 2s
+   350K .......... .......... .......... .......... .......... 64% 80.8K 2s
+   400K .......... .......... .......... .......... .......... 72% 90.1K 1s
+   450K .......... .......... .......... .......... .......... 80% 71.4K 1s
+   500K .......... .......... .......... .......... .......... 88% 77.2K 1s
+   550K .......... .......... .......... .......... .......... 96% 79.6K 0s
+   600K .......... .........                                  100%  126K=5.5s
+
+2019-06-21 00:14:43 (113 KB/s) - ‘json-c-0.13.tar.gz.3’ saved [634720/634720]
+
+json-c-0.13/
+json-c-0.13/json_pointer.h
+json-c-0.13/json_object_iterator.h
+json-c-0.13/ChangeLog
+json-c-0.13/json_tokener.h
+json-c-0.13/AUTHORS
+json-c-0.13/RELEASE_CHECKLIST.txt
+json-c-0.13/json_object_private.h
+json-c-0.13/json-c-uninstalled.pc.in
+json-c-0.13/depcomp
+json-c-0.13/strerror_override_private.h
+json-c-0.13/aclocal.m4
+json-c-0.13/config.sub
+json-c-0.13/Makefile.in
+json-c-0.13/NEWS
+json-c-0.13/config.h.win32
+json-c-0.13/.gitignore
+json-c-0.13/missing
+json-c-0.13/libjson.c
+json-c-0.13/json-c.pc.in
+json-c-0.13/README.md
+json-c-0.13/Doxyfile
+json-c-0.13/json_config.h.win32
+json-c-0.13/bits.h
+json-c-0.13/appveyor.yml
+json-c-0.13/arraylist.c
+json-c-0.13/json_c_version.h
+json-c-0.13/compile
+json-c-0.13/json_object_iterator.c
+json-c-0.13/vasprintf_compat.h
+json-c-0.13/configure
+json-c-0.13/json_pointer.c
+json-c-0.13/debug.c
+json-c-0.13/.editorconfig
+json-c-0.13/README
+json-c-0.13/json.h
+json-c-0.13/json_visit.c
+json-c-0.13/autogen.sh
+json-c-0.13/test-driver
+json-c-0.13/json_visit.h
+json-c-0.13/Makefile.am
+json-c-0.13/strerror_override.h
+json-c-0.13/configure.ac
+json-c-0.13/json_inttypes.h
+json-c-0.13/random_seed.c
+json-c-0.13/install-sh
+json-c-0.13/config.guess
+json-c-0.13/debug.h
+json-c-0.13/doc/
+json-c-0.13/doc/html/
+json-c-0.13/doc/html/globals_j.html
+json-c-0.13/doc/html/files.html
+json-c-0.13/doc/html/structjson__object__iter.html
+json-c-0.13/doc/html/arraylist_8h.html
+json-c-0.13/doc/html/index.html
+json-c-0.13/doc/html/structlh__entry.html
+json-c-0.13/doc/html/json__object_8h.html
+json-c-0.13/doc/html/globals_s.html
+json-c-0.13/doc/html/debug_8h.html
+json-c-0.13/doc/html/globals_enum.html
+json-c-0.13/doc/html/nav_g.png
+json-c-0.13/doc/html/dynsections.js
+json-c-0.13/doc/html/structjson__object.html
+json-c-0.13/doc/html/vasprintf__compat_8h.html
+json-c-0.13/doc/html/tab_h.png
+json-c-0.13/doc/html/json__c__version_8h.html
+json-c-0.13/doc/html/globals_f.html
+json-c-0.13/doc/html/md_issues_closed_for_0_813.html
+json-c-0.13/doc/html/structjson__tokener.html
+json-c-0.13/doc/html/nav_h.png
+json-c-0.13/doc/html/json_8h.html
+json-c-0.13/doc/html/functions_vars.html
+json-c-0.13/doc/html/jquery.js
+json-c-0.13/doc/html/functions.html
+json-c-0.13/doc/html/globals_func.html
+json-c-0.13/doc/html/json__inttypes_8h.html
+json-c-0.13/doc/html/globals_t.html
+json-c-0.13/doc/html/nav_f.png
+json-c-0.13/doc/html/classes.html
+json-c-0.13/doc/html/issues__closed__for__0_813_8md.html
+json-c-0.13/doc/html/tab_b.png
+json-c-0.13/doc/html/doc.png
+json-c-0.13/doc/html/bc_s.png
+json-c-0.13/doc/html/strerror__override__private_8h.html
+json-c-0.13/doc/html/globals_vars.html
+json-c-0.13/doc/html/snprintf__compat_8h.html
+json-c-0.13/doc/html/structjson__tokener__srec.html
+json-c-0.13/doc/html/globals_h.html
+json-c-0.13/doc/html/json__util_8h.html
+json-c-0.13/doc/html/globals_i.html
+json-c-0.13/doc/html/doxygen.css
+json-c-0.13/doc/html/printbuf_8h.html
+json-c-0.13/doc/html/json__object__iterator_8h.html
+json-c-0.13/doc/html/splitbar.png
+json-c-0.13/doc/html/bdwn.png
+json-c-0.13/doc/html/sync_off.png
+json-c-0.13/doc/html/random__seed_8h.html
+json-c-0.13/doc/html/json__pointer_8h.html
+json-c-0.13/doc/html/globals_a.html
+json-c-0.13/doc/html/strerror__override_8h.html
+json-c-0.13/doc/html/globals_type.html
+json-c-0.13/doc/html/closed.png
+json-c-0.13/doc/html/folderclosed.png
+json-c-0.13/doc/html/doxygen.png
+json-c-0.13/doc/html/menudata.js
+json-c-0.13/doc/html/globals_defs.html
+json-c-0.13/doc/html/folderopen.png
+json-c-0.13/doc/html/structarray__list.html
+json-c-0.13/doc/html/open.png
+json-c-0.13/doc/html/strdup__compat_8h.html
+json-c-0.13/doc/html/globals_l.html
+json-c-0.13/doc/html/structprintbuf.html
+json-c-0.13/doc/html/sync_on.png
+json-c-0.13/doc/html/tab_s.png
+json-c-0.13/doc/html/json__object__private_8h.html
+json-c-0.13/doc/html/globals_e.html
+json-c-0.13/doc/html/globals_p.html
+json-c-0.13/doc/html/bits_8h.html
+json-c-0.13/doc/html/structjson__object__iterator.html
+json-c-0.13/doc/html/json__visit_8h.html
+json-c-0.13/doc/html/deprecated.html
+json-c-0.13/doc/html/structlh__table.html
+json-c-0.13/doc/html/math__compat_8h.html
+json-c-0.13/doc/html/tab_a.png
+json-c-0.13/doc/html/tabs.css
+json-c-0.13/doc/html/pages.html
+json-c-0.13/doc/html/globals.html
+json-c-0.13/doc/html/unionjson__object_1_1data.html
+json-c-0.13/doc/html/linkhash_8h.html
+json-c-0.13/doc/html/menu.js
+json-c-0.13/doc/html/annotated.html
+json-c-0.13/doc/html/globals_m.html
+json-c-0.13/doc/html/README_8md.html
+json-c-0.13/doc/html/json__tokener_8h.html
+json-c-0.13/doc/html/globals_eval.html
+json-c-0.13/doc/html/globals_n.html
+json-c-0.13/Android.configure.mk
+json-c-0.13/strerror_override.c
+json-c-0.13/math_compat.h
+json-c-0.13/.travis.yml
+json-c-0.13/COPYING
+json-c-0.13/STYLE.txt
+json-c-0.13/json_util.c
+json-c-0.13/json_util.h
+json-c-0.13/linkhash.h
+json-c-0.13/printbuf.c
+json-c-0.13/ltmain.sh
+json-c-0.13/autoconf-archive/
+json-c-0.13/autoconf-archive/m4/
+json-c-0.13/autoconf-archive/m4/ax_require_defined.m4
+json-c-0.13/autoconf-archive/m4/ax_append_compile_flags.m4
+json-c-0.13/autoconf-archive/m4/ax_check_compile_flag.m4
+json-c-0.13/autoconf-archive/m4/ax_compile_check_sizeof.m4
+json-c-0.13/autoconf-archive/m4/ax_append_flag.m4
+json-c-0.13/autoconf-archive/README.txt
+json-c-0.13/json_object.c
+json-c-0.13/linkhash.c
+json-c-0.13/CMakeLists.txt
+json-c-0.13/json_tokener.c
+json-c-0.13/README.html
+json-c-0.13/INSTALL
+json-c-0.13/config.h.in
+json-c-0.13/printbuf.h
+json-c-0.13/snprintf_compat.h
+json-c-0.13/json_object.h
+json-c-0.13/arraylist.h
+json-c-0.13/strdup_compat.h
+json-c-0.13/json_config.h.in
+json-c-0.13/issues_closed_for_0.13.md
+json-c-0.13/json_c_version.c
+json-c-0.13/tests/
+json-c-0.13/tests/test1.test
+json-c-0.13/tests/test1.expected
+json-c-0.13/tests/test_parse_int64.test
+json-c-0.13/tests/test_double_serializer.c
+json-c-0.13/tests/test_compare.c
+json-c-0.13/tests/test4.test
+json-c-0.13/tests/parse_flags.c
+json-c-0.13/tests/test_printbuf.c
+json-c-0.13/tests/test_set_serializer.c
+json-c-0.13/tests/valid.json
+json-c-0.13/tests/test4.c
+json-c-0.13/tests/test_basic.test
+json-c-0.13/tests/Makefile.in
+json-c-0.13/tests/test_visit.c
+json-c-0.13/tests/test_charcase.expected
+json-c-0.13/tests/test_parse_int64.expected
+json-c-0.13/tests/test_printbuf.expected
+json-c-0.13/tests/test_locale.c
+json-c-0.13/tests/test_set_serializer.test
+json-c-0.13/tests/parse_flags.h
+json-c-0.13/tests/testReplaceExisting.expected
+json-c-0.13/tests/test_cast.c
+json-c-0.13/tests/test_null.expected
+json-c-0.13/tests/test_visit.expected
+json-c-0.13/tests/test2.expected
+json-c-0.13/tests/test_set_value.expected
+json-c-0.13/tests/test_parse.test
+json-c-0.13/tests/testReplaceExisting.c
+json-c-0.13/tests/test_parse_int64.c
+json-c-0.13/tests/test_util_file.test
+json-c-0.13/tests/test_int_add.test
+json-c-0.13/tests/test_float.c
+json-c-0.13/tests/test_null.c
+json-c-0.13/tests/test_parse.c
+json-c-0.13/tests/Makefile.am
+json-c-0.13/tests/test_locale.test
+json-c-0.13/tests/test_cast.test
+json-c-0.13/tests/test_deep_copy.expected
+json-c-0.13/tests/test1Formatted_pretty.expected
+json-c-0.13/tests/test1.c
+json-c-0.13/tests/test_util_file.c
+json-c-0.13/tests/test_float.expected
+json-c-0.13/tests/test_cast.expected
+json-c-0.13/tests/test_int_add.expected
+json-c-0.13/tests/test1Formatted_plain.expected
+json-c-0.13/tests/test_null.test
+json-c-0.13/tests/test_util_file.expected
+json-c-0.13/tests/test_charcase.test
+json-c-0.13/tests/test_json_pointer.test
+json-c-0.13/tests/test_printbuf.test
+json-c-0.13/tests/test2Formatted_pretty.expected
+json-c-0.13/tests/test2.test
+json-c-0.13/tests/test1Formatted_spaced.expected
+json-c-0.13/tests/test_json_pointer.c
+json-c-0.13/tests/test_deep_copy.c
+json-c-0.13/tests/test_set_value.c
+json-c-0.13/tests/test_compare.test
+json-c-0.13/tests/test2.c
+json-c-0.13/tests/test_deep_copy.test
+json-c-0.13/tests/test_double_serializer.test
+json-c-0.13/tests/test_parse.expected
+json-c-0.13/tests/test2Formatted_spaced.expected
+json-c-0.13/tests/test_float.test
+json-c-0.13/tests/test2Formatted_plain.expected
+json-c-0.13/tests/test4.expected
+json-c-0.13/tests/test_compare.expected
+json-c-0.13/tests/test_json_pointer.expected
+json-c-0.13/tests/test_charcase.c
+json-c-0.13/tests/test_double_serializer.expected
+json-c-0.13/tests/test_set_value.test
+json-c-0.13/tests/test_visit.test
+json-c-0.13/tests/test_int_add.c
+json-c-0.13/tests/test_locale.expected
+json-c-0.13/tests/test_set_serializer.expected
+json-c-0.13/tests/testReplaceExisting.test
+json-c-0.13/tests/test-defs.sh
+json-c-0.13/random_seed.h
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... no
+checking for mawk... mawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether make sets $(MAKE)... (cached) yes
+checking build system type... armv6l-unknown-linux-gnueabihf
+checking host system type... armv6l-unknown-linux-gnueabihf
+Multi-threaded support disabled. Use --enable-threading to enable.
+RDRAND Hardware RNG Hash Seed disabled. Use --enable-rdrand to enable
+checking whether make supports nested variables... (cached) yes
+checking for style of include used by make... GNU
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking whether gcc understands -c and -o together... yes
+checking dependency style of gcc... gcc3
+checking for gcc option to accept ISO C99... none needed
+checking how to run the C preprocessor... gcc -E
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking fcntl.h usability... yes
+checking fcntl.h presence... yes
+checking for fcntl.h... yes
+checking limits.h usability... yes
+checking limits.h presence... yes
+checking for limits.h... yes
+checking for strings.h... (cached) yes
+checking syslog.h usability... yes
+checking syslog.h presence... yes
+checking for syslog.h... yes
+checking for unistd.h... (cached) yes
+checking sys/cdefs.h usability... yes
+checking sys/cdefs.h presence... yes
+checking for sys/cdefs.h... yes
+checking sys/param.h usability... yes
+checking sys/param.h presence... yes
+checking for sys/param.h... yes
+checking stdarg.h usability... yes
+checking stdarg.h presence... yes
+checking for stdarg.h... yes
+checking locale.h usability... yes
+checking locale.h presence... yes
+checking for locale.h... yes
+checking xlocale.h usability... yes
+checking xlocale.h presence... yes
+checking for xlocale.h... yes
+checking endian.h usability... yes
+checking endian.h presence... yes
+checking for endian.h... yes
+checking for inttypes.h... (cached) yes
+checking for an ANSI C-conforming const... yes
+checking for size_t... yes
+checking for __thread support... yes
+checking for vprintf... yes
+checking for _doprnt... no
+checking for working memcmp... yes
+checking for realloc... yes
+checking for strcasecmp... yes
+checking for strdup... yes
+checking for strerror... yes
+checking for snprintf... yes
+checking for vsnprintf... yes
+checking for vasprintf... yes
+checking for open... yes
+checking for vsyslog... yes
+checking for strncasecmp... yes
+checking for setlocale... yes
+checking whether INFINITY is declared... yes
+checking whether nan is declared... yes
+checking whether isnan is declared... yes
+checking whether isinf is declared... yes
+checking whether _isnan is declared... no
+checking whether _finite is declared... no
+checking for GCC atomic builtins... yes
+checking for uselocale... yes
+checking if .gnu.warning accepts long strings... no
+checking how to print strings... printf
+checking for a sed that does not truncate output... /bin/sed
+checking for fgrep... /bin/grep -F
+checking for ld used by gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... yes
+checking how to convert armv6l-unknown-linux-gnueabihf file names to armv6l-unknown-linux-gnueabihf format... func_convert_file_noop
+checking how to convert armv6l-unknown-linux-gnueabihf file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for ar... ar
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for mt... mt
+checking if mt is a manifest tool... no
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/usr/bin/ld) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... no
+checking for -Bsymbolic-functions linker flag... yes
+checking whether C compiler accepts -Wall... yes
+checking whether C compiler accepts -Werror... yes
+checking whether C compiler accepts -Wcast-qual... yes
+checking whether C compiler accepts -Wno-error=deprecated-declarations... yes
+checking whether C compiler accepts -Wextra... yes
+checking whether C compiler accepts -Wwrite-string... no
+checking whether C compiler accepts -Wno-unused-parameter... yes
+checking whether C compiler accepts -D_GNU_SOURCE... yes
+checking whether C compiler accepts -D_REENTRANT... yes
+checking size of int... 4
+checking size of long... 4
+checking size of long long... 8
+checking size of size_t... 4
+checking size of int64_t... 8
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating json-c.pc
+config.status: creating tests/Makefile
+config.status: creating json-c-uninstalled.pc
+config.status: creating config.h
+config.status: config.h is unchanged
+config.status: creating json_config.h
+config.status: json_config.h is unchanged
+config.status: executing depfiles commands
+config.status: executing libtool commands
+(CDPATH="${ZSH_VERSION+.}:" && cd . && /bin/bash /home/idan/dev/rpi-hostap/bluez/json-c-0.13/missing autoheader)
+rm -f stamp-h1
+touch config.h.in
+cd . && /bin/bash ./config.status config.h
+config.status: creating config.h
+config.status: config.h is unchanged
+make  all-recursive
+make[1]: Entering directory '/home/idan/dev/rpi-hostap/bluez/json-c-0.13'
+Making all in .
+make[2]: Entering directory '/home/idan/dev/rpi-hostap/bluez/json-c-0.13'
+make[2]: Leaving directory '/home/idan/dev/rpi-hostap/bluez/json-c-0.13'
+Making all in tests
+make[2]: Entering directory '/home/idan/dev/rpi-hostap/bluez/json-c-0.13/tests'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/idan/dev/rpi-hostap/bluez/json-c-0.13/tests'
+make[1]: Leaving directory '/home/idan/dev/rpi-hostap/bluez/json-c-0.13'
+Making install in .
+make[1]: Entering directory '/home/idan/dev/rpi-hostap/bluez/json-c-0.13'
+make[2]: Entering directory '/home/idan/dev/rpi-hostap/bluez/json-c-0.13'
+ /bin/mkdir -p '/usr/lib'
+ /bin/bash ./libtool   --mode=install /usr/bin/install -c   libjson-c.la '/usr/lib'
+libtool: install: /usr/bin/install -c .libs/libjson-c.so.3.0.1 /usr/lib/libjson-c.so.3.0.1
+libtool: install: (cd /usr/lib && { ln -s -f libjson-c.so.3.0.1 libjson-c.so.3 || { rm -f libjson-c.so.3 && ln -s libjson-c.so.3.0.1 libjson-c.so.3; }; })
+libtool: install: (cd /usr/lib && { ln -s -f libjson-c.so.3.0.1 libjson-c.so || { rm -f libjson-c.so && ln -s libjson-c.so.3.0.1 libjson-c.so; }; })
+libtool: install: /usr/bin/install -c .libs/libjson-c.lai /usr/lib/libjson-c.la
+libtool: finish: PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/sbin" ldconfig -n /usr/lib
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /usr/lib
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the `-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the `LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the `LD_RUN_PATH' environment variable
+     during linking
+   - use the `-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to `/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+ /bin/mkdir -p '/usr/include/json-c'
+ /usr/bin/install -c -m 644 arraylist.h bits.h debug.h json.h json_c_version.h json_config.h json_inttypes.h json_object.h json_object_iterator.h json_pointer.h json_tokener.h json_util.h json_visit.h linkhash.h printbuf.h '/usr/include/json-c'
+ /bin/mkdir -p '/usr/lib/pkgconfig'
+ /usr/bin/install -c -m 644 json-c.pc '/usr/lib/pkgconfig'
+make[2]: Leaving directory '/home/idan/dev/rpi-hostap/bluez/json-c-0.13'
+make[1]: Leaving directory '/home/idan/dev/rpi-hostap/bluez/json-c-0.13'
+Making install in tests
+make[1]: Entering directory '/home/idan/dev/rpi-hostap/bluez/json-c-0.13/tests'
+make[2]: Entering directory '/home/idan/dev/rpi-hostap/bluez/json-c-0.13/tests'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/home/idan/dev/rpi-hostap/bluez/json-c-0.13/tests'
+make[1]: Leaving directory '/home/idan/dev/rpi-hostap/bluez/json-c-0.13/tests'
+--2019-06-21 00:16:17--  https://mirrors.edge.kernel.org/pub/linux/libs/ell/ell-0.6.tar.xz
+Resolving mirrors.edge.kernel.org (mirrors.edge.kernel.org)... 147.75.69.165, 2604:1380:1000:8100::1
+Connecting to mirrors.edge.kernel.org (mirrors.edge.kernel.org)|147.75.69.165|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 393016 (384K) [application/x-xz]
+Saving to: ‘ell-0.6.tar.xz.3’
+
+     0K .......... .......... .......... .......... .......... 13% 79.5K 4s
+    50K .......... .......... .......... .......... .......... 26%  222K 2s
+   100K .......... .......... .......... .......... .......... 39%  174K 2s
+   150K .......... .......... .......... .......... .......... 52%  160K 1s
+   200K .......... .......... .......... .......... .......... 65%  186K 1s
+   250K .......... .......... .......... .......... .......... 78%  194K 1s
+   300K .......... .......... .......... .......... .......... 91%  172K 0s
+   350K .......... .......... .......... ...                  100%  285K=2.4s
+
+2019-06-21 00:16:20 (161 KB/s) - ‘ell-0.6.tar.xz.3’ saved [393016/393016]
+
+ell-0.6/
+ell-0.6/aclocal.m4
+ell-0.6/INSTALL
+ell-0.6/config.h.in
+ell-0.6/configure.ac
+ell-0.6/acinclude.m4
+ell-0.6/configure
+ell-0.6/COPYING
+ell-0.6/Makefile.am
+ell-0.6/ell/
+ell-0.6/ell/key-private.h
+ell-0.6/ell/queue.c
+ell-0.6/ell/uintset.h
+ell-0.6/ell/siphash-private.h
+ell-0.6/ell/tls.c
+ell-0.6/ell/gvariant-private.h
+ell-0.6/ell/gvariant-util.c
+ell-0.6/ell/dbus.c
+ell-0.6/ell/dbus.h
+ell-0.6/ell/hwdb.h
+ell-0.6/ell/genl-private.h
+ell-0.6/ell/cipher.c
+ell-0.6/ell/ell.h
+ell-0.6/ell/checksum.c
+ell-0.6/ell/timeout.h
+ell-0.6/ell/netlink.c
+ell-0.6/ell/timeout.c
+ell-0.6/ell/log.h
+ell-0.6/ell/plugin.h
+ell-0.6/ell/net.h
+ell-0.6/ell/netlink-private.h
+ell-0.6/ell/main.h
+ell-0.6/ell/pem.h
+ell-0.6/ell/util.h
+ell-0.6/ell/settings.h
+ell-0.6/ell/pkcs5-private.h
+ell-0.6/ell/private.h
+ell-0.6/ell/siphash.c
+ell-0.6/ell/dbus-service.h
+ell-0.6/ell/dhcp.h
+ell-0.6/ell/idle.c
+ell-0.6/ell/genl.h
+ell-0.6/ell/idle.h
+ell-0.6/ell/file.c
+ell-0.6/ell/ringbuf.h
+ell-0.6/ell/netlink.h
+ell-0.6/ell/test.c
+ell-0.6/ell/checksum.h
+ell-0.6/ell/plugin.c
+ell-0.6/ell/file.h
+ell-0.6/ell/dhcp-transport.c
+ell-0.6/ell/ringbuf.c
+ell-0.6/ell/io.c
+ell-0.6/ell/uuid.c
+ell-0.6/ell/test.h
+ell-0.6/ell/pkcs5.h
+ell-0.6/ell/base64.h
+ell-0.6/ell/dbus-service.c
+ell-0.6/ell/key.c
+ell-0.6/ell/key.h
+ell-0.6/ell/pem.c
+ell-0.6/ell/string.c
+ell-0.6/ell/tls-private.h
+ell-0.6/ell/genl.c
+ell-0.6/ell/main.c
+ell-0.6/ell/util.c
+ell-0.6/ell/uintset.c
+ell-0.6/ell/random.c
+ell-0.6/ell/hwdb.c
+ell-0.6/ell/dbus-util.c
+ell-0.6/ell/tls.h
+ell-0.6/ell/base64.c
+ell-0.6/ell/io.h
+ell-0.6/ell/uuid.h
+ell-0.6/ell/dbus-client.h
+ell-0.6/ell/pkcs5.c
+ell-0.6/ell/queue.h
+ell-0.6/ell/dbus-client.c
+ell-0.6/ell/dbus-message.c
+ell-0.6/ell/signal.c
+ell-0.6/ell/dhcp.c
+ell-0.6/ell/cipher.h
+ell-0.6/ell/net.c
+ell-0.6/ell/dhcp-private.h
+ell-0.6/ell/string.h
+ell-0.6/ell/dbus-private.h
+ell-0.6/ell/settings.c
+ell-0.6/ell/hashmap.h
+ell-0.6/ell/tls-record.c
+ell-0.6/ell/signal.h
+ell-0.6/ell/random.h
+ell-0.6/ell/asn1-private.h
+ell-0.6/ell/hashmap.c
+ell-0.6/ell/dbus-filter.c
+ell-0.6/ell/missing.h
+ell-0.6/ell/log.c
+ell-0.6/ell/ell.pc.in
+ell-0.6/ell/dhcp-lease.c
+ell-0.6/ell/dbus-name-cache.c
+ell-0.6/ChangeLog
+ell-0.6/Makefile.in
+ell-0.6/AUTHORS
+ell-0.6/examples/
+ell-0.6/examples/https-server-test.c
+ell-0.6/examples/glib-eventloop.c
+ell-0.6/examples/https-client-test.c
+ell-0.6/examples/dbus-service.c
+ell-0.6/examples/dbus-client.c
+ell-0.6/examples/dhcp-client.c
+ell-0.6/TODO
+ell-0.6/unit/
+ell-0.6/unit/test-pbkdf2.c
+ell-0.6/unit/test-genl.c
+ell-0.6/unit/test-plugin.c
+ell-0.6/unit/test-dhcp.c
+ell-0.6/unit/test-queue.c
+ell-0.6/unit/test-util.c
+ell-0.6/unit/test-uuid.c
+ell-0.6/unit/test-dbus-properties.c
+ell-0.6/unit/test-siphash.c
+ell-0.6/unit/test-cipher.c
+ell-0.6/unit/gencerts.cnf
+ell-0.6/unit/test-pem.c
+ell-0.6/unit/test-dbus-watch.c
+ell-0.6/unit/test-dbus-util.c
+ell-0.6/unit/plaintext.txt
+ell-0.6/unit/test-dbus-message-fds.c
+ell-0.6/unit/test-key.c
+ell-0.6/unit/test-netlink.c
+ell-0.6/unit/test-genl-msg.c
+ell-0.6/unit/settings.test
+ell-0.6/unit/test-settings.c
+ell-0.6/unit/example-plugin.c
+ell-0.6/unit/test-gvariant-message.c
+ell-0.6/unit/test-unit.c
+ell-0.6/unit/test-hwdb.c
+ell-0.6/unit/test-main.c
+ell-0.6/unit/test-random.c
+ell-0.6/unit/test-endian.c
+ell-0.6/unit/test-base64.c
+ell-0.6/unit/test-dbus-service.c
+ell-0.6/unit/test-ringbuf.c
+ell-0.6/unit/test-dbus.c
+ell-0.6/unit/test-dbus-message.c
+ell-0.6/unit/test-io.c
+ell-0.6/unit/test-string.c
+ell-0.6/unit/test-checksum.c
+ell-0.6/unit/test-uintset.c
+ell-0.6/unit/test-utf8.c
+ell-0.6/unit/test-tls.c
+ell-0.6/unit/test-hashmap.c
+ell-0.6/unit/test-gvariant-util.c
+ell-0.6/unit/dbus.conf
+ell-0.6/build-aux/
+ell-0.6/build-aux/depcomp
+ell-0.6/build-aux/install-sh
+ell-0.6/build-aux/libtool.m4
+ell-0.6/build-aux/missing
+ell-0.6/build-aux/ltoptions.m4
+ell-0.6/build-aux/ltsugar.m4
+ell-0.6/build-aux/config.guess
+ell-0.6/build-aux/ltversion.m4
+ell-0.6/build-aux/lt~obsolete.m4
+ell-0.6/build-aux/ltmain.sh
+ell-0.6/build-aux/compile
+ell-0.6/build-aux/test-driver
+ell-0.6/build-aux/config.sub
+ell-0.6/README
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... no
+checking for mawk... mawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking how to create a pax tar archive... gnutar
+checking whether make supports nested variables... (cached) yes
+checking whether to enable maintainer-specific portions of Makefiles... no
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking whether gcc understands -c and -o together... yes
+checking for style of include used by make... GNU
+checking dependency style of gcc... gcc3
+checking whether gcc accepts -fPIE... yes
+checking whether gcc accepts -fsanitize=address... yes
+checking whether gcc accepts -fsanitize=leak... yes
+checking whether gcc accepts -fsanitize=undefined... yes
+checking how to run the C preprocessor... gcc -E
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking whether char is unsigned... no
+checking whether byte ordering is bigendian... no
+checking build system type... armv6l-unknown-linux-gnueabihf
+checking host system type... armv6l-unknown-linux-gnueabihf
+checking how to print strings... printf
+checking for a sed that does not truncate output... /bin/sed
+checking for fgrep... /bin/grep -F
+checking for ld used by gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... yes
+checking how to convert armv6l-unknown-linux-gnueabihf file names to armv6l-unknown-linux-gnueabihf format... func_convert_file_noop
+checking how to convert armv6l-unknown-linux-gnueabihf file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for ar... ar
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for mt... mt
+checking if mt is a manifest tool... no
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/usr/bin/ld) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... no
+checking for __sanitizer_cov_init in -lasan... yes
+checking for __sanitizer_cov_init in -llsan... no
+checking for __sanitizer_cov_init in -lubsan... yes
+checking for signalfd... yes
+checking for timerfd_create... yes
+checking for epoll_create... yes
+checking for dlopen in -ldl... yes
+checking linux/types.h usability... yes
+checking linux/types.h presence... yes
+checking for linux/types.h... yes
+checking linux/if_alg.h usability... yes
+checking linux/if_alg.h presence... yes
+checking for linux/if_alg.h... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating ell/ell.pc
+config.status: creating config.h
+config.status: config.h is unchanged
+config.status: executing depfiles commands
+config.status: executing libtool commands
+make --no-print-directory all-am
+make --no-print-directory install-am
+ /bin/mkdir -p '/usr/lib'
+ /bin/bash ./libtool   --mode=install /usr/bin/install -c   ell/libell.la '/usr/lib'
+libtool: install: /usr/bin/install -c ell/.libs/libell.so.0.0.1 /usr/lib/libell.so.0.0.1
+libtool: install: (cd /usr/lib && { ln -s -f libell.so.0.0.1 libell.so.0 || { rm -f libell.so.0 && ln -s libell.so.0.0.1 libell.so.0; }; })
+libtool: install: (cd /usr/lib && { ln -s -f libell.so.0.0.1 libell.so || { rm -f libell.so && ln -s libell.so.0.0.1 libell.so; }; })
+libtool: install: /usr/bin/install -c ell/.libs/libell.lai /usr/lib/libell.la
+libtool: finish: PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/sbin" ldconfig -n /usr/lib
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /usr/lib
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the `-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the `LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the `LD_RUN_PATH' environment variable
+     during linking
+   - use the `-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to `/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+ /bin/mkdir -p '/usr/lib/pkgconfig'
+ /usr/bin/install -c -m 644 ell/ell.pc '/usr/lib/pkgconfig'
+ /bin/mkdir -p '/usr/include/ell'
+ /usr/bin/install -c -m 644 ell/ell.h ell/util.h ell/test.h ell/queue.h ell/hashmap.h ell/string.h ell/settings.h ell/main.h ell/idle.h ell/signal.h ell/timeout.h ell/io.h ell/ringbuf.h ell/log.h ell/plugin.h ell/checksum.h ell/netlink.h ell/genl.h ell/dbus.h ell/dbus-service.h ell/dbus-client.h ell/hwdb.h ell/cipher.h ell/random.h ell/uintset.h ell/base64.h ell/pem.h ell/tls.h ell/uuid.h ell/key.h ell/pkcs5.h ell/file.h ell/net.h ell/dhcp.h '/usr/include/ell'
+URL transformed to HTTPS due to an HSTS policy
+--2019-06-21 00:17:19--  https://www.kernel.org/pub/linux/bluetooth/bluez-5.50.tar.xz
+Resolving www.kernel.org (www.kernel.org)... 147.75.56.137, 2604:1380:4030:1000::1
+Connecting to www.kernel.org (www.kernel.org)|147.75.56.137|:443... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: https://mirrors.edge.kernel.org/pub/linux/bluetooth/bluez-5.50.tar.xz [following]
+--2019-06-21 00:17:19--  https://mirrors.edge.kernel.org/pub/linux/bluetooth/bluez-5.50.tar.xz
+Resolving mirrors.edge.kernel.org (mirrors.edge.kernel.org)... 147.75.69.165, 2604:1380:1000:8100::1
+Connecting to mirrors.edge.kernel.org (mirrors.edge.kernel.org)|147.75.69.165|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1755384 (1.7M) [application/x-xz]
+Saving to: ‘bluez-5.50.tar.xz.3’
+
+     0K .......... .......... .......... .......... ..........  2% 83.3K 20s
+    50K .......... .......... .......... .......... ..........  5%  149K 15s
+   100K .......... .......... .......... .......... ..........  8%  198K 12s
+   150K .......... .......... .......... .......... .......... 11%  217K 11s
+   200K .......... .......... .......... .......... .......... 14%  227K 10s
+   250K .......... .......... .......... .......... .......... 17%  167K 9s
+   300K .......... .......... .......... .......... .......... 20%  205K 9s
+   350K .......... .......... .......... .......... .......... 23%  160K 8s
+   400K .......... .......... .......... .......... .......... 26%  179K 8s
+   450K .......... .......... .......... .......... .......... 29%  201K 7s
+   500K .......... .......... .......... .......... .......... 32%  167K 7s
+   550K .......... .......... .......... .......... .......... 35%  127K 7s
+   600K .......... .......... .......... .......... .......... 37% 95.0K 7s
+   650K .......... .......... .......... .......... .......... 40%  184K 7s
+   700K .......... .......... .......... .......... .......... 43%  328K 6s
+   750K .......... .......... .......... .......... .......... 46%  143K 6s
+   800K .......... .......... .......... .......... .......... 49%  172K 5s
+   850K .......... .......... .......... .......... .......... 52%  197K 5s
+   900K .......... .......... .......... .......... .......... 55%  247K 5s
+   950K .......... .......... .......... .......... .......... 58%  200K 4s
+  1000K .......... .......... .......... .......... .......... 61%  149K 4s
+  1050K .......... .......... .......... .......... .......... 64% 97.7K 4s
+  1100K .......... .......... .......... .......... .......... 67%  201K 3s
+  1150K .......... .......... .......... .......... .......... 70%  167K 3s
+  1200K .......... .......... .......... .......... .......... 72%  180K 3s
+  1250K .......... .......... .......... .......... .......... 75%  181K 3s
+  1300K .......... .......... .......... .......... .......... 78%  160K 2s
+  1350K .......... .......... .......... .......... .......... 81%  285K 2s
+  1400K .......... .......... .......... .......... .......... 84%  118K 2s
+  1450K .......... .......... .......... .......... .......... 87%  200K 1s
+  1500K .......... .......... .......... .......... .......... 90%  206K 1s
+  1550K .......... .......... .......... .......... .......... 93% 68.5K 1s
+  1600K .......... .......... .......... .......... .......... 96%  188K 0s
+  1650K .......... .......... .......... .......... .......... 99%  263K 0s
+  1700K .......... ....                                       100%  803K=11s
+
+2019-06-21 00:17:30 (162 KB/s) - ‘bluez-5.50.tar.xz.3’ saved [1755384/1755384]
+
+bluez-5.50/
+bluez-5.50/Makefile.plugins
+bluez-5.50/emulator/
+bluez-5.50/emulator/bthost.h
+bluez-5.50/emulator/phy.c
+bluez-5.50/emulator/hfp.c
+bluez-5.50/emulator/hciemu.h
+bluez-5.50/emulator/smp.c
+bluez-5.50/emulator/le.h
+bluez-5.50/emulator/server.c
+bluez-5.50/emulator/bthost.c
+bluez-5.50/emulator/b1ee.c
+bluez-5.50/emulator/serial.h
+bluez-5.50/emulator/vhci.h
+bluez-5.50/emulator/phy.h
+bluez-5.50/emulator/btdev.c
+bluez-5.50/emulator/btdev.h
+bluez-5.50/emulator/main.c
+bluez-5.50/emulator/le.c
+bluez-5.50/emulator/amp.h
+bluez-5.50/emulator/serial.c
+bluez-5.50/emulator/vhci.c
+bluez-5.50/emulator/server.h
+bluez-5.50/emulator/hciemu.c
+bluez-5.50/emulator/amp.c
+bluez-5.50/aclocal.m4
+bluez-5.50/depcomp
+bluez-5.50/INSTALL
+bluez-5.50/peripheral/
+bluez-5.50/peripheral/gatt.h
+bluez-5.50/peripheral/efivars.c
+bluez-5.50/peripheral/log.h
+bluez-5.50/peripheral/attach.c
+bluez-5.50/peripheral/gap.h
+bluez-5.50/peripheral/attach.h
+bluez-5.50/peripheral/gap.c
+bluez-5.50/peripheral/efivars.h
+bluez-5.50/peripheral/gatt.c
+bluez-5.50/peripheral/main.c
+bluez-5.50/peripheral/log.c
+bluez-5.50/Makefile.obexd
+bluez-5.50/mesh/
+bluez-5.50/mesh/gatt.h
+bluez-5.50/mesh/mesh-net.h
+bluez-5.50/mesh/prov.h
+bluez-5.50/mesh/net.h
+bluez-5.50/mesh/util.h
+bluez-5.50/mesh/onoff-model.h
+bluez-5.50/mesh/local_node.json
+bluez-5.50/mesh/agent.c
+bluez-5.50/mesh/crypto.h
+bluez-5.50/mesh/config-client.c
+bluez-5.50/mesh/prov-db.h
+bluez-5.50/mesh/prov_db.json
+bluez-5.50/mesh/config-server.c
+bluez-5.50/mesh/keys.h
+bluez-5.50/mesh/gatt.c
+bluez-5.50/mesh/main.c
+bluez-5.50/mesh/util.c
+bluez-5.50/mesh/config-model.h
+bluez-5.50/mesh/onoff-model.c
+bluez-5.50/mesh/crypto.c
+bluez-5.50/mesh/prov-db.c
+bluez-5.50/mesh/net.c
+bluez-5.50/mesh/node.c
+bluez-5.50/mesh/agent.h
+bluez-5.50/mesh/prov.c
+bluez-5.50/mesh/node.h
+bluez-5.50/Makefile.tools
+bluez-5.50/config.h.in
+bluez-5.50/btio/
+bluez-5.50/btio/btio.c
+bluez-5.50/btio/btio.h
+bluez-5.50/install-sh
+bluez-5.50/attrib/
+bluez-5.50/attrib/gatt.h
+bluez-5.50/attrib/gatttool.c
+bluez-5.50/attrib/gattrib.c
+bluez-5.50/attrib/gatttool.h
+bluez-5.50/attrib/att-database.h
+bluez-5.50/attrib/interactive.c
+bluez-5.50/attrib/gatt-service.c
+bluez-5.50/attrib/utils.c
+bluez-5.50/attrib/gatt-service.h
+bluez-5.50/attrib/gatt.c
+bluez-5.50/attrib/gattrib.h
+bluez-5.50/attrib/att.c
+bluez-5.50/attrib/att.h
+bluez-5.50/missing
+bluez-5.50/configure.ac
+bluez-5.50/acinclude.m4
+bluez-5.50/NEWS
+bluez-5.50/configure
+bluez-5.50/COPYING
+bluez-5.50/Makefile.am
+bluez-5.50/doc/
+bluez-5.50/doc/pts-opp.txt
+bluez-5.50/doc/pixit-opp.txt
+bluez-5.50/doc/sap-api.txt
+bluez-5.50/doc/media-api.txt
+bluez-5.50/doc/input-api.txt
+bluez-5.50/doc/adapter-api.txt
+bluez-5.50/doc/obex-agent-api.txt
+bluez-5.50/doc/health-api.txt
+bluez-5.50/doc/btsnoop.txt
+bluez-5.50/doc/test-coverage.txt
+bluez-5.50/doc/test-runner.txt
+bluez-5.50/doc/settings-storage.txt
+bluez-5.50/doc/profile-api.txt
+bluez-5.50/doc/btmon.txt
+bluez-5.50/doc/supported-features.txt
+bluez-5.50/doc/obex-api.txt
+bluez-5.50/doc/pics-opp.txt
+bluez-5.50/doc/mgmt-api.txt
+bluez-5.50/doc/device-api.txt
+bluez-5.50/doc/advertising-api.txt
+bluez-5.50/doc/gatt-api.txt
+bluez-5.50/doc/network-api.txt
+bluez-5.50/doc/assigned-numbers.txt
+bluez-5.50/doc/agent-api.txt
+bluez-5.50/obexd/
+bluez-5.50/obexd/src/
+bluez-5.50/obexd/src/obex.c
+bluez-5.50/obexd/src/transport.c
+bluez-5.50/obexd/src/mimetype.c
+bluez-5.50/obexd/src/service.h
+bluez-5.50/obexd/src/log.h
+bluez-5.50/obexd/src/plugin.h
+bluez-5.50/obexd/src/org.bluez.obex.service
+bluez-5.50/obexd/src/map_ap.h
+bluez-5.50/obexd/src/server.c
+bluez-5.50/obexd/src/transport.h
+bluez-5.50/obexd/src/obex.h
+bluez-5.50/obexd/src/plugin.c
+bluez-5.50/obexd/src/obex-priv.h
+bluez-5.50/obexd/src/main.c
+bluez-5.50/obexd/src/obexd.h
+bluez-5.50/obexd/src/manager.h
+bluez-5.50/obexd/src/service.c
+bluez-5.50/obexd/src/mimetype.h
+bluez-5.50/obexd/src/obex.service.in
+bluez-5.50/obexd/src/manager.c
+bluez-5.50/obexd/src/server.h
+bluez-5.50/obexd/src/genbuiltin
+bluez-5.50/obexd/src/log.c
+bluez-5.50/obexd/plugins/
+bluez-5.50/obexd/plugins/messages-dummy.c
+bluez-5.50/obexd/plugins/bluetooth.c
+bluez-5.50/obexd/plugins/ftp.h
+bluez-5.50/obexd/plugins/phonebook-dummy.c
+bluez-5.50/obexd/plugins/filesystem.c
+bluez-5.50/obexd/plugins/mas.c
+bluez-5.50/obexd/plugins/opp.c
+bluez-5.50/obexd/plugins/messages.h
+bluez-5.50/obexd/plugins/phonebook.h
+bluez-5.50/obexd/plugins/vcard.c
+bluez-5.50/obexd/plugins/vcard.h
+bluez-5.50/obexd/plugins/pcsuite.c
+bluez-5.50/obexd/plugins/ftp.c
+bluez-5.50/obexd/plugins/filesystem.h
+bluez-5.50/obexd/plugins/pbap.c
+bluez-5.50/obexd/plugins/irmc.c
+bluez-5.50/obexd/client/
+bluez-5.50/obexd/client/map-event.h
+bluez-5.50/obexd/client/bluetooth.c
+bluez-5.50/obexd/client/pbap.h
+bluez-5.50/obexd/client/transfer.h
+bluez-5.50/obexd/client/ftp.h
+bluez-5.50/obexd/client/transport.c
+bluez-5.50/obexd/client/opp.h
+bluez-5.50/obexd/client/mns.c
+bluez-5.50/obexd/client/opp.c
+bluez-5.50/obexd/client/transport.h
+bluez-5.50/obexd/client/sync.h
+bluez-5.50/obexd/client/ftp.c
+bluez-5.50/obexd/client/map.c
+bluez-5.50/obexd/client/transfer.c
+bluez-5.50/obexd/client/pbap.c
+bluez-5.50/obexd/client/sync.c
+bluez-5.50/obexd/client/manager.h
+bluez-5.50/obexd/client/session.c
+bluez-5.50/obexd/client/bluetooth.h
+bluez-5.50/obexd/client/session.h
+bluez-5.50/obexd/client/map-event.c
+bluez-5.50/obexd/client/driver.c
+bluez-5.50/obexd/client/manager.c
+bluez-5.50/obexd/client/map.h
+bluez-5.50/obexd/client/driver.h
+bluez-5.50/src/
+bluez-5.50/src/sdp-client.c
+bluez-5.50/src/backtrace.c
+bluez-5.50/src/sdpd-database.c
+bluez-5.50/src/service.h
+bluez-5.50/src/attrib-server.c
+bluez-5.50/src/gatt-database.c
+bluez-5.50/src/sdpd-server.c
+bluez-5.50/src/gatt-client.h
+bluez-5.50/src/log.h
+bluez-5.50/src/plugin.h
+bluez-5.50/src/systemd.h
+bluez-5.50/src/sdp-client.h
+bluez-5.50/src/shared/
+bluez-5.50/src/shared/queue.c
+bluez-5.50/src/shared/tester.h
+bluez-5.50/src/shared/hfp.c
+bluez-5.50/src/shared/att-types.h
+bluez-5.50/src/shared/gatt-server.c
+bluez-5.50/src/shared/timeout.h
+bluez-5.50/src/shared/gatt-client.h
+bluez-5.50/src/shared/gatt-server.h
+bluez-5.50/src/shared/ad.h
+bluez-5.50/src/shared/gatt-db.h
+bluez-5.50/src/shared/util.h
+bluez-5.50/src/shared/mainloop.c
+bluez-5.50/src/shared/timeout-mainloop.c
+bluez-5.50/src/shared/hci.c
+bluez-5.50/src/shared/ad.c
+bluez-5.50/src/shared/pcap.c
+bluez-5.50/src/shared/ecc.h
+bluez-5.50/src/shared/uhid.c
+bluez-5.50/src/shared/tester.c
+bluez-5.50/src/shared/gatt-helpers.c
+bluez-5.50/src/shared/uhid.h
+bluez-5.50/src/shared/crypto.h
+bluez-5.50/src/shared/gap.h
+bluez-5.50/src/shared/ringbuf.h
+bluez-5.50/src/shared/io-mainloop.c
+bluez-5.50/src/shared/btsnoop.c
+bluez-5.50/src/shared/tty.h
+bluez-5.50/src/shared/timeout-glib.c
+bluez-5.50/src/shared/gatt-helpers.h
+bluez-5.50/src/shared/ringbuf.c
+bluez-5.50/src/shared/hci-crypto.c
+bluez-5.50/src/shared/btsnoop.h
+bluez-5.50/src/shared/mgmt.h
+bluez-5.50/src/shared/pcap.h
+bluez-5.50/src/shared/mainloop-glib.c
+bluez-5.50/src/shared/gap.c
+bluez-5.50/src/shared/hfp.h
+bluez-5.50/src/shared/io-ell.c
+bluez-5.50/src/shared/util.c
+bluez-5.50/src/shared/ecc.c
+bluez-5.50/src/shared/btp.h
+bluez-5.50/src/shared/io.h
+bluez-5.50/src/shared/btp.c
+bluez-5.50/src/shared/hci-crypto.h
+bluez-5.50/src/shared/queue.h
+bluez-5.50/src/shared/io-glib.c
+bluez-5.50/src/shared/crypto.c
+bluez-5.50/src/shared/mgmt.c
+bluez-5.50/src/shared/mainloop.h
+bluez-5.50/src/shared/hci.h
+bluez-5.50/src/shared/shell.c
+bluez-5.50/src/shared/gatt-client.c
+bluez-5.50/src/shared/att.c
+bluez-5.50/src/shared/shell.h
+bluez-5.50/src/shared/gatt-db.c
+bluez-5.50/src/shared/att.h
+bluez-5.50/src/main.conf
+bluez-5.50/src/oui.c
+bluez-5.50/src/adapter.h
+bluez-5.50/src/bluetooth.service.in
+bluez-5.50/src/systemd.c
+bluez-5.50/src/agent.c
+bluez-5.50/src/uuid-helper.h
+bluez-5.50/src/storage.c
+bluez-5.50/src/profile.h
+bluez-5.50/src/plugin.c
+bluez-5.50/src/profile.c
+bluez-5.50/src/rfkill.c
+bluez-5.50/src/adapter.c
+bluez-5.50/src/sdpd-request.c
+bluez-5.50/src/device.c
+bluez-5.50/src/eir.h
+bluez-5.50/src/uinput.h
+bluez-5.50/src/org.bluez.service
+bluez-5.50/src/storage.h
+bluez-5.50/src/uuid-helper.c
+bluez-5.50/src/textfile.c
+bluez-5.50/src/oui.h
+bluez-5.50/src/bluetoothd.8.in
+bluez-5.50/src/dbus-common.h
+bluez-5.50/src/device.h
+bluez-5.50/src/main.c
+bluez-5.50/src/hcid.h
+bluez-5.50/src/sdpd-service.c
+bluez-5.50/src/service.c
+bluez-5.50/src/dbus-common.c
+bluez-5.50/src/sdp-xml.c
+bluez-5.50/src/sdpd.h
+bluez-5.50/src/gatt-database.h
+bluez-5.50/src/bluetooth.ver
+bluez-5.50/src/textfile.h
+bluez-5.50/src/bluetooth.conf
+bluez-5.50/src/advertising.h
+bluez-5.50/src/backtrace.h
+bluez-5.50/src/error.h
+bluez-5.50/src/agent.h
+bluez-5.50/src/gatt-client.c
+bluez-5.50/src/attrib-server.h
+bluez-5.50/src/sdp-xml.h
+bluez-5.50/src/eir.c
+bluez-5.50/src/error.c
+bluez-5.50/src/genbuiltin
+bluez-5.50/src/log.c
+bluez-5.50/src/advertising.c
+bluez-5.50/profiles/
+bluez-5.50/profiles/cups/
+bluez-5.50/profiles/cups/cups.h
+bluez-5.50/profiles/cups/spp.c
+bluez-5.50/profiles/cups/hcrp.c
+bluez-5.50/profiles/cups/sdp.c
+bluez-5.50/profiles/cups/main.c
+bluez-5.50/profiles/deviceinfo/
+bluez-5.50/profiles/deviceinfo/deviceinfo.c
+bluez-5.50/profiles/deviceinfo/dis.h
+bluez-5.50/profiles/deviceinfo/dis.c
+bluez-5.50/profiles/network/
+bluez-5.50/profiles/network/connection.c
+bluez-5.50/profiles/network/bnep.h
+bluez-5.50/profiles/network/server.c
+bluez-5.50/profiles/network/connection.h
+bluez-5.50/profiles/network/manager.c
+bluez-5.50/profiles/network/server.h
+bluez-5.50/profiles/network/bnep.c
+bluez-5.50/profiles/network/network.conf
+bluez-5.50/profiles/iap/
+bluez-5.50/profiles/iap/main.c
+bluez-5.50/profiles/health/
+bluez-5.50/profiles/health/hdp_main.c
+bluez-5.50/profiles/health/hdp.h
+bluez-5.50/profiles/health/mcap.h
+bluez-5.50/profiles/health/hdp_util.c
+bluez-5.50/profiles/health/hdp_manager.c
+bluez-5.50/profiles/health/mcap.c
+bluez-5.50/profiles/health/hdp_manager.h
+bluez-5.50/profiles/health/hdp.c
+bluez-5.50/profiles/health/hdp_util.h
+bluez-5.50/profiles/health/hdp_types.h
+bluez-5.50/profiles/scanparam/
+bluez-5.50/profiles/scanparam/scan.c
+bluez-5.50/profiles/scanparam/scpp.h
+bluez-5.50/profiles/scanparam/scpp.c
+bluez-5.50/profiles/input/
+bluez-5.50/profiles/input/uhid_copy.h
+bluez-5.50/profiles/input/suspend-dummy.c
+bluez-5.50/profiles/input/suspend-none.c
+bluez-5.50/profiles/input/server.c
+bluez-5.50/profiles/input/sixaxis.h
+bluez-5.50/profiles/input/hog-lib.h
+bluez-5.50/profiles/input/suspend.h
+bluez-5.50/profiles/input/device.c
+bluez-5.50/profiles/input/hog.c
+bluez-5.50/profiles/input/input.conf
+bluez-5.50/profiles/input/device.h
+bluez-5.50/profiles/input/hidp_defs.h
+bluez-5.50/profiles/input/manager.c
+bluez-5.50/profiles/input/hog-lib.c
+bluez-5.50/profiles/input/server.h
+bluez-5.50/profiles/audio/
+bluez-5.50/profiles/audio/player.h
+bluez-5.50/profiles/audio/media.c
+bluez-5.50/profiles/audio/source.c
+bluez-5.50/profiles/audio/transport.c
+bluez-5.50/profiles/audio/sink.h
+bluez-5.50/profiles/audio/a2dp.h
+bluez-5.50/profiles/audio/media.h
+bluez-5.50/profiles/audio/a2dp.c
+bluez-5.50/profiles/audio/transport.h
+bluez-5.50/profiles/audio/control.c
+bluez-5.50/profiles/audio/avrcp.h
+bluez-5.50/profiles/audio/avctp.c
+bluez-5.50/profiles/audio/a2dp-codecs.h
+bluez-5.50/profiles/audio/avrcp.c
+bluez-5.50/profiles/audio/source.h
+bluez-5.50/profiles/audio/avdtp.h
+bluez-5.50/profiles/audio/player.c
+bluez-5.50/profiles/audio/sink.c
+bluez-5.50/profiles/audio/avctp.h
+bluez-5.50/profiles/audio/avdtp.c
+bluez-5.50/profiles/audio/control.h
+bluez-5.50/profiles/midi/
+bluez-5.50/profiles/midi/midi.c
+bluez-5.50/profiles/midi/libmidi.h
+bluez-5.50/profiles/midi/libmidi.c
+bluez-5.50/profiles/battery/
+bluez-5.50/profiles/battery/battery.c
+bluez-5.50/profiles/battery/bas.h
+bluez-5.50/profiles/battery/bas.c
+bluez-5.50/profiles/gap/
+bluez-5.50/profiles/gap/gas.c
+bluez-5.50/profiles/sap/
+bluez-5.50/profiles/sap/server.c
+bluez-5.50/profiles/sap/main.c
+bluez-5.50/profiles/sap/manager.h
+bluez-5.50/profiles/sap/sap-dummy.c
+bluez-5.50/profiles/sap/sap.h
+bluez-5.50/profiles/sap/manager.c
+bluez-5.50/profiles/sap/server.h
+bluez-5.50/android/
+bluez-5.50/android/pts-map.txt
+bluez-5.50/android/hal-ipc-api.txt
+bluez-5.50/android/hidhost.c
+bluez-5.50/android/tester-hdp.c
+bluez-5.50/android/pts-a2dp.txt
+bluez-5.50/android/pts-avdtp.txt
+bluez-5.50/android/pts-iopt.txt
+bluez-5.50/android/pts-opp.txt
+bluez-5.50/android/pics-mcap.txt
+bluez-5.50/android/hardware/
+bluez-5.50/android/hardware/bt_hf.h
+bluez-5.50/android/hardware/bt_hh.h
+bluez-5.50/android/hardware/bt_av.h
+bluez-5.50/android/hardware/bt_mce.h
+bluez-5.50/android/hardware/bt_sock.h
+bluez-5.50/android/hardware/bt_hl.h
+bluez-5.50/android/hardware/bt_gatt_client.h
+bluez-5.50/android/hardware/bt_gatt.h
+bluez-5.50/android/hardware/bt_hf_client.h
+bluez-5.50/android/hardware/hardware.h
+bluez-5.50/android/hardware/bt_pan.h
+bluez-5.50/android/hardware/bluetooth.h
+bluez-5.50/android/hardware/audio_effect.h
+bluez-5.50/android/hardware/audio.h
+bluez-5.50/android/hardware/bt_rc.h
+bluez-5.50/android/hardware/hardware.c
+bluez-5.50/android/hardware/bt_gatt_types.h
+bluez-5.50/android/hardware/bt_gatt_server.h
+bluez-5.50/android/pts-pan.txt
+bluez-5.50/android/bluetooth.c
+bluez-5.50/android/health.h
+bluez-5.50/android/pixit-opp.txt
+bluez-5.50/android/gatt.h
+bluez-5.50/android/pts-hogp.txt
+bluez-5.50/android/pics-gatt.txt
+bluez-5.50/android/pics-rfcomm.txt
+bluez-5.50/android/tester-main.c
+bluez-5.50/android/pixit-hogp.txt
+bluez-5.50/android/pts-did.txt
+bluez-5.50/android/pixit-mcap.txt
+bluez-5.50/android/pixit-spp.txt
+bluez-5.50/android/pan.h
+bluez-5.50/android/hal-map-client.c
+bluez-5.50/android/a2dp.h
+bluez-5.50/android/pan.c
+bluez-5.50/android/pts-sdp.txt
+bluez-5.50/android/pixit-did.txt
+bluez-5.50/android/pts-gap.txt
+bluez-5.50/android/pics-bnep.txt
+bluez-5.50/android/pixit-bnep.txt
+bluez-5.50/android/tester-avrcp.c
+bluez-5.50/android/hal-ipc.h
+bluez-5.50/android/pics-pan.txt
+bluez-5.50/android/pics-map.txt
+bluez-5.50/android/ipc-tester.c
+bluez-5.50/android/hal-handsfree-client.c
+bluez-5.50/android/tester-a2dp.c
+bluez-5.50/android/hal-hidhost.c
+bluez-5.50/android/a2dp.c
+bluez-5.50/android/pics-gap.txt
+bluez-5.50/android/pics-hfp.txt
+bluez-5.50/android/sco.c
+bluez-5.50/android/pixit-mps.txt
+bluez-5.50/android/pics-avdtp.txt
+bluez-5.50/android/pts-sm.txt
+bluez-5.50/android/map-client.h
+bluez-5.50/android/bluetoothd_snoop.te
+bluez-5.50/android/bluetoothd-wrapper.c
+bluez-5.50/android/pts-mcap.txt
+bluez-5.50/android/hal-utils.c
+bluez-5.50/android/hal-handsfree.c
+bluez-5.50/android/ipc.h
+bluez-5.50/android/pics-avrcp.txt
+bluez-5.50/android/pixit-hid.txt
+bluez-5.50/android/hal-audio-aptx.c
+bluez-5.50/android/pixit-gatt.txt
+bluez-5.50/android/pics-scpp.txt
+bluez-5.50/android/avdtptest.c
+bluez-5.50/android/system-emulator.c
+bluez-5.50/android/pixit-scpp.txt
+bluez-5.50/android/tester-map-client.c
+bluez-5.50/android/pixit-rfcomm.txt
+bluez-5.50/android/pics-hsp.txt
+bluez-5.50/android/pixit-avctp.txt
+bluez-5.50/android/pics-gavdp.txt
+bluez-5.50/android/system/
+bluez-5.50/android/system/audio.h
+bluez-5.50/android/hal-gatt.c
+bluez-5.50/android/init.bluetooth.rc
+bluez-5.50/android/a2dp-sink.h
+bluez-5.50/android/pics-iopt.txt
+bluez-5.50/android/hal-audio.c
+bluez-5.50/android/pics-opp.txt
+bluez-5.50/android/pixit-pbap.txt
+bluez-5.50/android/hal-avrcp-ctrl.c
+bluez-5.50/android/pts-spp.txt
+bluez-5.50/android/handsfree-client.h
+bluez-5.50/android/pics-hdp.txt
+bluez-5.50/android/tester-socket.c
+bluez-5.50/android/pts-pbap.txt
+bluez-5.50/android/ipc-common.h
+bluez-5.50/android/cts.txt
+bluez-5.50/android/hal-socket.c
+bluez-5.50/android/pts-mps.txt
+bluez-5.50/android/tester-pan.c
+bluez-5.50/android/tester-main.h
+bluez-5.50/android/pts-dis.txt
+bluez-5.50/android/Android.mk
+bluez-5.50/android/ipc.c
+bluez-5.50/android/hidhost.h
+bluez-5.50/android/pixit-gavdp.txt
+bluez-5.50/android/pics-spp.txt
+bluez-5.50/android/pts-gavdp.txt
+bluez-5.50/android/pixit-sdp.txt
+bluez-5.50/android/health.c
+bluez-5.50/android/Makefile.am
+bluez-5.50/android/pts-bnep.txt
+bluez-5.50/android/cutils/
+bluez-5.50/android/cutils/properties.h
+bluez-5.50/android/pixit-iopt.txt
+bluez-5.50/android/pics-did.txt
+bluez-5.50/android/pts-scpp.txt
+bluez-5.50/android/pics-mps.txt
+bluez-5.50/android/pixit-sm.txt
+bluez-5.50/android/audio_utils/
+bluez-5.50/android/audio_utils/resampler.h
+bluez-5.50/android/audio_utils/resampler.c
+bluez-5.50/android/bluetoothd.te
+bluez-5.50/android/pixit-l2cap.txt
+bluez-5.50/android/audio-ipc-api.txt
+bluez-5.50/android/hal-audio-sbc.c
+bluez-5.50/android/pixit-avrcp.txt
+bluez-5.50/android/pixit-pan.txt
+bluez-5.50/android/pics-hid.txt
+bluez-5.50/android/hal-pan.c
+bluez-5.50/android/pics-avctp.txt
+bluez-5.50/android/pics-sm.txt
+bluez-5.50/android/tester-bluetooth.c
+bluez-5.50/android/pixit-hfp.txt
+bluez-5.50/android/pics-sdp.txt
+bluez-5.50/android/gatt.c
+bluez-5.50/android/pts-l2cap.txt
+bluez-5.50/android/avrcp-lib.h
+bluez-5.50/android/a2dp-sink.c
+bluez-5.50/android/pixit-gap.txt
+bluez-5.50/android/hal-avrcp.c
+bluez-5.50/android/main.c
+bluez-5.50/android/pts-hid.txt
+bluez-5.50/android/compat/
+bluez-5.50/android/compat/wordexp.h
+bluez-5.50/android/compat/readline/
+bluez-5.50/android/compat/readline/history.h
+bluez-5.50/android/compat/readline/readline.h
+bluez-5.50/android/avrcp.h
+bluez-5.50/android/handsfree.c
+bluez-5.50/android/pts-gatt.txt
+bluez-5.50/android/pts-avctp.txt
+bluez-5.50/android/pics-pbap.txt
+bluez-5.50/android/pixit-hdp.txt
+bluez-5.50/android/bluetoothd-snoop.c
+bluez-5.50/android/tester-gatt.c
+bluez-5.50/android/hal-a2dp.c
+bluez-5.50/android/avctp.c
+bluez-5.50/android/bluetooth.h
+bluez-5.50/android/client/
+bluez-5.50/android/client/if-main.h
+bluez-5.50/android/client/if-pan.c
+bluez-5.50/android/client/if-rc-ctrl.c
+bluez-5.50/android/client/if-sco.c
+bluez-5.50/android/client/if-mce.c
+bluez-5.50/android/client/if-hl.c
+bluez-5.50/android/client/pollhandler.h
+bluez-5.50/android/client/pollhandler.c
+bluez-5.50/android/client/history.c
+bluez-5.50/android/client/history.h
+bluez-5.50/android/client/if-av-sink.c
+bluez-5.50/android/client/if-rc.c
+bluez-5.50/android/client/haltest.c
+bluez-5.50/android/client/if-gatt.c
+bluez-5.50/android/client/terminal.h
+bluez-5.50/android/client/if-hf.c
+bluez-5.50/android/client/tabcompletion.c
+bluez-5.50/android/client/terminal.c
+bluez-5.50/android/client/if-audio.c
+bluez-5.50/android/client/if-hf-client.c
+bluez-5.50/android/client/if-hh.c
+bluez-5.50/android/client/if-sock.c
+bluez-5.50/android/client/if-av.c
+bluez-5.50/android/client/if-bt.c
+bluez-5.50/android/hal-sco.c
+bluez-5.50/android/pts-hdp.txt
+bluez-5.50/android/hal-bluetooth.c
+bluez-5.50/android/pixit-avdtp.txt
+bluez-5.50/android/hal-audio.h
+bluez-5.50/android/hal-log.h
+bluez-5.50/android/pics-l2cap.txt
+bluez-5.50/android/handsfree.h
+bluez-5.50/android/socket.h
+bluez-5.50/android/hal-msg.h
+bluez-5.50/android/pts-rfcomm.txt
+bluez-5.50/android/pixit-hsp.txt
+bluez-5.50/android/tester-hidhost.c
+bluez-5.50/android/test-ipc.c
+bluez-5.50/android/avrcp.c
+bluez-5.50/android/sco-msg.h
+bluez-5.50/android/avrcp-lib.c
+bluez-5.50/android/hal-ipc.c
+bluez-5.50/android/pixit-a2dp.txt
+bluez-5.50/android/hal-health.c
+bluez-5.50/android/pts-avrcp.txt
+bluez-5.50/android/avdtp.h
+bluez-5.50/android/utils.h
+bluez-5.50/android/pics-hogp.txt
+bluez-5.50/android/pixit-map.txt
+bluez-5.50/android/pixit-dis.txt
+bluez-5.50/android/pts-hfp.txt
+bluez-5.50/android/README
+bluez-5.50/android/handsfree-client.c
+bluez-5.50/android/map-client.c
+bluez-5.50/android/avctp.h
+bluez-5.50/android/socket.c
+bluez-5.50/android/pts-hsp.txt
+bluez-5.50/android/avdtp.c
+bluez-5.50/android/hal.h
+bluez-5.50/android/hal-utils.h
+bluez-5.50/android/hal-a2dp-sink.c
+bluez-5.50/android/pics-a2dp.txt
+bluez-5.50/android/log.c
+bluez-5.50/android/audio-msg.h
+bluez-5.50/android/pics-dis.txt
+bluez-5.50/android/sco.h
+bluez-5.50/config.guess
+bluez-5.50/ChangeLog
+bluez-5.50/gdbus/
+bluez-5.50/gdbus/polkit.c
+bluez-5.50/gdbus/gdbus.h
+bluez-5.50/gdbus/object.c
+bluez-5.50/gdbus/mainloop.c
+bluez-5.50/gdbus/watch.c
+bluez-5.50/gdbus/client.c
+bluez-5.50/Makefile.in
+bluez-5.50/plugins/
+bluez-5.50/plugins/sixaxis.c
+bluez-5.50/plugins/wiimote.c
+bluez-5.50/plugins/autopair.c
+bluez-5.50/plugins/neard.c
+bluez-5.50/plugins/hostname.c
+bluez-5.50/plugins/external-dummy.c
+bluez-5.50/plugins/policy.c
+bluez-5.50/ltmain.sh
+bluez-5.50/compile
+bluez-5.50/AUTHORS
+bluez-5.50/monitor/
+bluez-5.50/monitor/sdp.h
+bluez-5.50/monitor/analyze.c
+bluez-5.50/monitor/vendor.h
+bluez-5.50/monitor/hwdb.h
+bluez-5.50/monitor/a2dp.h
+bluez-5.50/monitor/packet.c
+bluez-5.50/monitor/bt.h
+bluez-5.50/monitor/lmp.c
+bluez-5.50/monitor/bnep.h
+bluez-5.50/monitor/a2dp.c
+bluez-5.50/monitor/intel.h
+bluez-5.50/monitor/rfcomm.c
+bluez-5.50/monitor/ellisys.c
+bluez-5.50/monitor/ll.c
+bluez-5.50/monitor/broadcom.h
+bluez-5.50/monitor/lmp.h
+bluez-5.50/monitor/display.c
+bluez-5.50/monitor/hcidump.h
+bluez-5.50/monitor/ll.h
+bluez-5.50/monitor/ellisys.h
+bluez-5.50/monitor/tty.h
+bluez-5.50/monitor/control.c
+bluez-5.50/monitor/sdp.c
+bluez-5.50/monitor/keys.c
+bluez-5.50/monitor/crc.h
+bluez-5.50/monitor/keys.h
+bluez-5.50/monitor/intel.c
+bluez-5.50/monitor/broadcom.c
+bluez-5.50/monitor/packet.h
+bluez-5.50/monitor/crc.c
+bluez-5.50/monitor/main.c
+bluez-5.50/monitor/hwdb.c
+bluez-5.50/monitor/hcidump.c
+bluez-5.50/monitor/avctp.c
+bluez-5.50/monitor/analyze.h
+bluez-5.50/monitor/l2cap.h
+bluez-5.50/monitor/l2cap.c
+bluez-5.50/monitor/bnep.c
+bluez-5.50/monitor/avdtp.h
+bluez-5.50/monitor/rfcomm.h
+bluez-5.50/monitor/avctp.h
+bluez-5.50/monitor/vendor.c
+bluez-5.50/monitor/avdtp.c
+bluez-5.50/monitor/display.h
+bluez-5.50/monitor/control.h
+bluez-5.50/client/
+bluez-5.50/client/gatt.h
+bluez-5.50/client/display.c
+bluez-5.50/client/agent.c
+bluez-5.50/client/gatt.c
+bluez-5.50/client/main.c
+bluez-5.50/client/advertising.h
+bluez-5.50/client/agent.h
+bluez-5.50/client/display.h
+bluez-5.50/client/advertising.c
+bluez-5.50/gobex/
+bluez-5.50/gobex/gobex-packet.c
+bluez-5.50/gobex/gobex-apparam.h
+bluez-5.50/gobex/gobex.h
+bluez-5.50/gobex/gobex-defs.h
+bluez-5.50/gobex/gobex-header.h
+bluez-5.50/gobex/gobex-debug.h
+bluez-5.50/gobex/gobex-apparam.c
+bluez-5.50/gobex/gobex-packet.h
+bluez-5.50/gobex/gobex-header.c
+bluez-5.50/gobex/gobex-defs.c
+bluez-5.50/gobex/gobex.c
+bluez-5.50/gobex/gobex-transfer.c
+bluez-5.50/lib/
+bluez-5.50/lib/sdp.h
+bluez-5.50/lib/bluetooth.c
+bluez-5.50/lib/bnep.h
+bluez-5.50/lib/hci.c
+bluez-5.50/lib/a2mp.h
+bluez-5.50/lib/cmtp.h
+bluez-5.50/lib/sdp_lib.h
+bluez-5.50/lib/sdp.c
+bluez-5.50/lib/uuid.c
+bluez-5.50/lib/bluez.pc.in
+bluez-5.50/lib/mgmt.h
+bluez-5.50/lib/bluetooth.h
+bluez-5.50/lib/uuid.h
+bluez-5.50/lib/amp.h
+bluez-5.50/lib/hci.h
+bluez-5.50/lib/hci_lib.h
+bluez-5.50/lib/l2cap.h
+bluez-5.50/lib/rfcomm.h
+bluez-5.50/lib/hidp.h
+bluez-5.50/lib/sco.h
+bluez-5.50/tools/
+bluez-5.50/tools/hciattach.1
+bluez-5.50/tools/userchan-tester.c
+bluez-5.50/tools/sdptool.1
+bluez-5.50/tools/bccmd.1
+bluez-5.50/tools/hciattach_tialt.c
+bluez-5.50/tools/seq2bseq.c
+bluez-5.50/tools/csr_bcsp.c
+bluez-5.50/tools/test-runner.c
+bluez-5.50/tools/ciptool.c
+bluez-5.50/tools/hcitool.c
+bluez-5.50/tools/obex-server-tool.c
+bluez-5.50/tools/hid2hci.1
+bluez-5.50/tools/hid2hci.c
+bluez-5.50/tools/hcieventmask.c
+bluez-5.50/tools/gap-tester.c
+bluez-5.50/tools/hciattach_qualcomm.c
+bluez-5.50/tools/mpris-proxy.c
+bluez-5.50/tools/ubcsp.c
+bluez-5.50/tools/btiotest.c
+bluez-5.50/tools/create-image.c
+bluez-5.50/tools/rfcomm.c
+bluez-5.50/tools/hex2hcd.c
+bluez-5.50/tools/bluetooth-logger.service.in
+bluez-5.50/tools/btmon-logger.c
+bluez-5.50/tools/bluetooth-player.c
+bluez-5.50/tools/ibeacon.c
+bluez-5.50/tools/rtlfw.c
+bluez-5.50/tools/avtest.c
+bluez-5.50/tools/hciattach_bcm43xx.c
+bluez-5.50/tools/amptest.c
+bluez-5.50/tools/mgmt-tester.c
+bluez-5.50/tools/smp-tester.c
+bluez-5.50/tools/csr_hci.c
+bluez-5.50/tools/obexctl.c
+bluez-5.50/tools/oobtest.c
+bluez-5.50/tools/btpclient.c
+bluez-5.50/tools/nokfw.c
+bluez-5.50/tools/rfcomm-tester.c
+bluez-5.50/tools/hciattach_ti.c
+bluez-5.50/tools/btsnoop.c
+bluez-5.50/tools/scotest.c
+bluez-5.50/tools/l2ping.1
+bluez-5.50/tools/btinfo.c
+bluez-5.50/tools/advtest.c
+bluez-5.50/tools/parser/
+bluez-5.50/tools/parser/sdp.h
+bluez-5.50/tools/parser/obex.c
+bluez-5.50/tools/parser/lmp.c
+bluez-5.50/tools/parser/bpa.c
+bluez-5.50/tools/parser/smp.c
+bluez-5.50/tools/parser/rfcomm.c
+bluez-5.50/tools/parser/hci.c
+bluez-5.50/tools/parser/cmtp.c
+bluez-5.50/tools/parser/tcpip.c
+bluez-5.50/tools/parser/hcrp.c
+bluez-5.50/tools/parser/sdp.c
+bluez-5.50/tools/parser/parser.h
+bluez-5.50/tools/parser/sap.c
+bluez-5.50/tools/parser/parser.c
+bluez-5.50/tools/parser/hidp.c
+bluez-5.50/tools/parser/ericsson.c
+bluez-5.50/tools/parser/capi.c
+bluez-5.50/tools/parser/avctp.c
+bluez-5.50/tools/parser/avrcp.c
+bluez-5.50/tools/parser/l2cap.h
+bluez-5.50/tools/parser/l2cap.c
+bluez-5.50/tools/parser/ppp.c
+bluez-5.50/tools/parser/bnep.c
+bluez-5.50/tools/parser/att.c
+bluez-5.50/tools/parser/rfcomm.h
+bluez-5.50/tools/parser/avdtp.c
+bluez-5.50/tools/parser/amp.c
+bluez-5.50/tools/parser/csr.c
+bluez-5.50/tools/btproxy.c
+bluez-5.50/tools/gatt-service.c
+bluez-5.50/tools/rfcomm.1
+bluez-5.50/tools/hciconfig.1
+bluez-5.50/tools/3dsp.c
+bluez-5.50/tools/hcisecfilter.c
+bluez-5.50/tools/l2cap-tester.c
+bluez-5.50/tools/sdptool.c
+bluez-5.50/tools/ciptool.1
+bluez-5.50/tools/hcidump.1
+bluez-5.50/tools/btmgmt.c
+bluez-5.50/tools/hci-tester.c
+bluez-5.50/tools/ubcsp.h
+bluez-5.50/tools/hciattach_st.c
+bluez-5.50/tools/eddystone.c
+bluez-5.50/tools/rctest.1
+bluez-5.50/tools/hciattach.h
+bluez-5.50/tools/avinfo.c
+bluez-5.50/tools/btattach.c
+bluez-5.50/tools/hwdb.c
+bluez-5.50/tools/hid2hci.rules
+bluez-5.50/tools/magic.btsnoop
+bluez-5.50/tools/btgatt-server.c
+bluez-5.50/tools/l2test.c
+bluez-5.50/tools/hcidump.c
+bluez-5.50/tools/hcitool.1
+bluez-5.50/tools/hciattach_intel.c
+bluez-5.50/tools/bdaddr.c
+bluez-5.50/tools/l2ping.c
+bluez-5.50/tools/csr_usb.c
+bluez-5.50/tools/bneptest.c
+bluez-5.50/tools/bdaddr.1
+bluez-5.50/tools/csr_3wire.c
+bluez-5.50/tools/btattach.1
+bluez-5.50/tools/bccmd.c
+bluez-5.50/tools/bnep-tester.c
+bluez-5.50/tools/btconfig.c
+bluez-5.50/tools/check-selftest.c
+bluez-5.50/tools/hciattach_ath3k.c
+bluez-5.50/tools/hciconfig.c
+bluez-5.50/tools/btgatt-client.c
+bluez-5.50/tools/mcaptest.c
+bluez-5.50/tools/rctest.c
+bluez-5.50/tools/csr_h4.c
+bluez-5.50/tools/csr.h
+bluez-5.50/tools/obex-client-tool.c
+bluez-5.50/tools/sco-tester.c
+bluez-5.50/tools/csr.c
+bluez-5.50/tools/bluemoon.c
+bluez-5.50/tools/hciattach.c
+bluez-5.50/tools/cltest.c
+bluez-5.50/COPYING.LIB
+bluez-5.50/TODO
+bluez-5.50/unit/
+bluez-5.50/unit/test-hfp.c
+bluez-5.50/unit/test-queue.c
+bluez-5.50/unit/test-gdbus-client.c
+bluez-5.50/unit/test-crypto.c
+bluez-5.50/unit/test-uuid.c
+bluez-5.50/unit/test-uhid.c
+bluez-5.50/unit/test-gobex-packet.c
+bluez-5.50/unit/test-avrcp.c
+bluez-5.50/unit/util.h
+bluez-5.50/unit/test-gobex-header.c
+bluez-5.50/unit/test-crc.c
+bluez-5.50/unit/test-avdtp.c
+bluez-5.50/unit/test-gobex.c
+bluez-5.50/unit/test-textfile.c
+bluez-5.50/unit/test-gobex-transfer.c
+bluez-5.50/unit/test-mgmt.c
+bluez-5.50/unit/test-gobex-apparam.c
+bluez-5.50/unit/test-eir.c
+bluez-5.50/unit/test-hog.c
+bluez-5.50/unit/util.c
+bluez-5.50/unit/test-ringbuf.c
+bluez-5.50/unit/test-sdp.c
+bluez-5.50/unit/test-ecc.c
+bluez-5.50/unit/test-midi.c
+bluez-5.50/unit/test-gattrib.c
+bluez-5.50/unit/test-avctp.c
+bluez-5.50/unit/test-lib.c
+bluez-5.50/unit/test-gatt.c
+bluez-5.50/README
+bluez-5.50/test-driver
+bluez-5.50/config.sub
+bluez-5.50/test/
+bluez-5.50/test/service-did.xml
+bluez-5.50/test/test-health-sink
+bluez-5.50/test/test-health
+bluez-5.50/test/test-adapter
+bluez-5.50/test/test-device
+bluez-5.50/test/pbap-client
+bluez-5.50/test/map-client
+bluez-5.50/test/test-gatt-profile
+bluez-5.50/test/monitor-bluetooth
+bluez-5.50/test/dbusdef.py
+bluez-5.50/test/test-nap
+bluez-5.50/test/test-profile
+bluez-5.50/test/example-advertisement
+bluez-5.50/test/test-discovery
+bluez-5.50/test/example-gatt-server
+bluez-5.50/test/example-gatt-client
+bluez-5.50/test/test-manager
+bluez-5.50/test/ftp-client
+bluez-5.50/test/list-devices
+bluez-5.50/test/test-sap-server
+bluez-5.50/test/simple-agent
+bluez-5.50/test/service-opp.xml
+bluez-5.50/test/simple-endpoint
+bluez-5.50/test/service-ftp.xml
+bluez-5.50/test/service-record.dtd
+bluez-5.50/test/service-spp.xml
+bluez-5.50/test/test-hfp
+bluez-5.50/test/test-network
+bluez-5.50/test/opp-client
+bluez-5.50/test/bluezutils.py
+bluez-5.50/test/sap_client.py
+bluez-5.50/test/simple-player
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... no
+checking for mawk... mawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking how to create a pax tar archive... gnutar
+checking for style of include used by make... GNU
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking whether gcc understands -c and -o together... yes
+checking dependency style of gcc... gcc3
+checking how to run the C preprocessor... gcc -E
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking minix/config.h usability... no
+checking minix/config.h presence... no
+checking for minix/config.h... no
+checking whether it is safe to define __EXTENSIONS__... yes
+checking whether make supports nested variables... (cached) yes
+checking whether to enable maintainer-specific portions of Makefiles... no
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for C/C++ restrict keyword... __restrict
+checking for gcc... (cached) gcc
+checking whether we are using the GNU C compiler... (cached) yes
+checking whether gcc accepts -g... (cached) yes
+checking for gcc option to accept ISO C89... (cached) none needed
+checking whether gcc understands -c and -o together... (cached) yes
+checking dependency style of gcc... (cached) gcc3
+checking whether gcc accepts -fPIE... yes
+checking build system type... armv6l-unknown-linux-gnueabihf
+checking host system type... armv6l-unknown-linux-gnueabihf
+checking how to print strings... printf
+checking for a sed that does not truncate output... /bin/sed
+checking for fgrep... /bin/grep -F
+checking for ld used by gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... yes
+checking how to convert armv6l-unknown-linux-gnueabihf file names to armv6l-unknown-linux-gnueabihf format... func_convert_file_noop
+checking how to convert armv6l-unknown-linux-gnueabihf file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for ar... ar
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for mt... mt
+checking if mt is a manifest tool... no
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/usr/bin/ld) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... no
+checking for signalfd... yes
+checking for clock_gettime in -lrt... yes
+checking for pthread_create in -lpthread... yes
+checking for dlopen in -ldl... yes
+checking linux/types.h usability... yes
+checking linux/types.h presence... yes
+checking for linux/types.h... yes
+checking linux/if_alg.h usability... yes
+checking linux/if_alg.h presence... yes
+checking for linux/if_alg.h... yes
+checking for GLIB... yes
+checking for DBUS... yes
+checking D-Bus configuration directory... /etc
+checking D-Bus system bus services dir... /usr/share/dbus-1/system-services
+checking D-Bus session bus services dir... /usr/share/dbus-1/services
+checking for UDEV... yes
+checking for udev_hwdb_new in -ludev... yes
+checking udev directory... /lib/udev
+checking for JSONC... yes
+checking for ICAL... yes
+checking for ELL... yes
+checking readline/readline.h usability... yes
+checking readline/readline.h presence... yes
+checking for readline/readline.h... yes
+checking systemd system unit dir... /lib/systemd/system
+checking systemd user unit dir... /usr/lib/systemd/user
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating src/bluetoothd.8
+config.status: creating lib/bluez.pc
+config.status: creating config.h
+config.status: config.h is unchanged
+config.status: executing depfiles commands
+config.status: executing libtool commands
+make --no-print-directory all-am
+  CC       src/shared/io-ell.lo
+  CCLD     src/libshared-ell.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+  CC       mesh/prov-db.o
+  CCLD     mesh/meshctl
+  GEN      src/bluetooth.service
+  CCLD     src/bluetoothd
+  GEN      obexd/src/obex.service
+make --no-print-directory install-am
+ /bin/mkdir -p '/usr/bin'
+  /bin/bash ./libtool   --mode=install /usr/bin/install -c client/bluetoothctl mesh/meshctl monitor/btmon tools/rctest tools/l2test tools/l2ping tools/bccmd tools/bluemoon tools/hex2hcd tools/mpris-proxy tools/btattach '/usr/bin'
+libtool: install: /usr/bin/install -c client/bluetoothctl /usr/bin/bluetoothctl
+libtool: install: /usr/bin/install -c mesh/meshctl /usr/bin/meshctl
+libtool: install: /usr/bin/install -c monitor/btmon /usr/bin/btmon
+libtool: install: /usr/bin/install -c tools/rctest /usr/bin/rctest
+libtool: install: /usr/bin/install -c tools/l2test /usr/bin/l2test
+libtool: install: /usr/bin/install -c tools/l2ping /usr/bin/l2ping
+libtool: install: /usr/bin/install -c tools/bccmd /usr/bin/bccmd
+libtool: install: /usr/bin/install -c tools/bluemoon /usr/bin/bluemoon
+libtool: install: /usr/bin/install -c tools/hex2hcd /usr/bin/hex2hcd
+libtool: install: /usr/bin/install -c tools/mpris-proxy /usr/bin/mpris-proxy
+libtool: install: /usr/bin/install -c tools/btattach /usr/bin/btattach
+ /bin/mkdir -p '/usr/libexec/bluetooth'
+  /bin/bash ./libtool   --mode=install /usr/bin/install -c src/bluetoothd obexd/src/obexd '/usr/libexec/bluetooth'
+libtool: install: /usr/bin/install -c src/bluetoothd /usr/libexec/bluetooth/bluetoothd
+libtool: install: /usr/bin/install -c obexd/src/obexd /usr/libexec/bluetooth/obexd
+ /bin/mkdir -p '/usr/lib/cups/backend'
+  /bin/bash ./libtool   --mode=install /usr/bin/install -c profiles/cups/bluetooth '/usr/lib/cups/backend'
+libtool: install: /usr/bin/install -c profiles/cups/bluetooth /usr/lib/cups/backend/bluetooth
+ /bin/mkdir -p '/etc/dbus-1/system.d'
+ /usr/bin/install -c -m 644 src/bluetooth.conf '/etc/dbus-1/system.d'
+ /bin/mkdir -p '/usr/share/dbus-1/services'
+ /usr/bin/install -c -m 644 obexd/src/org.bluez.obex.service '/usr/share/dbus-1/services'
+ /bin/mkdir -p '/usr/share/dbus-1/system-services'
+ /usr/bin/install -c -m 644 src/org.bluez.service '/usr/share/dbus-1/system-services'
+ /bin/mkdir -p '/usr/share/man/man1'
+ /usr/bin/install -c -m 644 tools/rctest.1 tools/l2ping.1 tools/bccmd.1 tools/btattach.1 tools/hid2hci.1 '/usr/share/man/man1'
+ /bin/mkdir -p '/usr/share/man/man8'
+ /usr/bin/install -c -m 644 src/bluetoothd.8 '/usr/share/man/man8'
+ /bin/mkdir -p '/lib/udev/rules.d'
+ /usr/bin/install -c -m 644 tools/97-hid2hci.rules '/lib/udev/rules.d'
+ /bin/mkdir -p '/lib/systemd/system'
+ /usr/bin/install -c -m 644 src/bluetooth.service '/lib/systemd/system'
+ /bin/mkdir -p '/usr/lib/systemd/user'
+ /usr/bin/install -c -m 644 obexd/src/obex.service '/usr/lib/systemd/user'
+ /bin/mkdir -p '/lib/udev'
+  /bin/bash ./libtool   --mode=install /usr/bin/install -c tools/hid2hci '/lib/udev'
+libtool: install: /usr/bin/install -c tools/hid2hci /lib/udev/hid2hci
+cp: cannot create regular file 'configuration/bluetoothd.orig': No such file or directory
+Check to ensure version 5.50
+5.50
+meshctl: 5.50
+installation complete, rebooting...
