@@ -1,24 +1,23 @@
 #!/bin/bash
 
+mkdir rpi-kernel && cd rpi-kernel
+sudo apt-get install -y git bc libncurses5-dev
+
+git clone https://github.com/raspberrypi/tools
+cd tools
+echo PATH=\$PATH:$(pwd)/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian-x64/bin | tee -a ~/.bashrc
+source ~/.bashrc
+
 wget https://github.com/raspberrypi/linux/archive/raspberrypi-kernel_1.20190215-1.tar.gz
 tar -xvf raspberrypi-kernel_1.20190215-1.tar.gz
-
 cd linux-raspberrypi-kernel_1.20190215-1
 
 # use kernel7 if on rpi 3 B+ (kernel for zero w)
 KERNEL=kernel
-sudo make bcm2709_defconfig
-cp ../configuration kernel-bluez-config .config
+make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- bcm2709_defconfig
+cp ../../configuration kernel-bluez-config .config
 
-sudo make -j4 zImage modules dtbs
+make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- zImage modules dtbs -j6
 
-sudo make modules_install
+echo "kernel cross compiled, use rpi-wsl-install-kernel-sd-card.sh to deploy to SD Card..."
 
-sudo cp arch/arm/boot/dts/*.dtb /boot/
-sudo cp arch/arm/boot/dts/overlays/*.dtb* /boot/overlays/
-sudo cp arch/arm/boot/dts/overlays/README /boot/overlays/
-sudo cp arch/arm/boot/zImage /boot/$KERNEL.img
-
-echo "kernel rebuilt and deployed for bluez, rebooting..."
-
-#sudo reboot

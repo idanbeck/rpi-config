@@ -2,26 +2,45 @@
 
 echo "note you need to be in the folder of the linux installation"
 
+KERNEL=kernel
+
+if [ ! -d mnt ] ; then
+	mkdir mnt
+fi
+
 fat32Drive=e:
-fat32MntPoint=/mnt/fat32
 ext4Drive=f:
-ext4MntPoint=/mnt/ext4
 
-sudo mkdir $fat32MntPoint
-sudo mkfir $ext4MntPoint
+if [ ! -d mnt/fat32 ] ; then
+	sudo mkdir mnt/fat32
+fi
 
-sudo mount -t drvfs $fat32Drive $fat32MntPoint
-sudo mount -t drvfs $ext4Drive $ext4MntPoint
+if [ ! -d mnt/ext4 ] ; then
+	sudo mkdir mnt/ext4
+fi
 
+sudo mount -t drvfs $fat32Drive mnt/fat32
+sudo mount -t drvfs $ext4Drive mnt/ext4
 
-sudo make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- INSTALL_MOD_PATH=$ext4MntPoint modules_install
+sudo make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- INSTALL_MOD_PATH=mnt/ext4 modules_install
 
-sudo cp /mnt/fat32/$KERNEL.img $fat32MntPoint/$KERNEL-backup.img
-sudo cp arch/arm/boot/zImage $fat32MntPoint/$KERNEL.img
-sudo cp arch/arm/boot/dts/*.dtb $fat32MntPoint/
-sudo cp arch/arm/boot/dts/overlays/*.dtb* $fat32MntPoint/overlays/
-sudo cp arch/arm/boot/dts/overlays/README $fat32MntPoint/overlays/
+echo "Copying over Kernel"
+sudo cp mnt/fat32/$KERNEL.img mnt/fat32/$KERNEL-backup.img
+sudo cp arch/arm/boot/zImage mnt/fat32/$KERNEL.img
+sudo cp arch/arm/boot/dts/*.dtb mnt/fat32/
+sudo cp arch/arm/boot/dts/overlays/*.dtb* mnt/fat32/overlays/
+sudo cp arch/arm/boot/dts/overlays/README mnt/fat32/overlays/
 
-sudo umount $fat32MntPoint
-sudo umount $extMntPoint
+sleep 2
+
+echo "Unmounting SD card rPi FS"
+sudo umount mnt/fat32
+
+sleep 2
+sudo umount mnt/ext4
+
+sleep 2
+
+rmdir mnt/fat32
+rmdir mnt/ext4
 
